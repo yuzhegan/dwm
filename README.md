@@ -48,6 +48,13 @@ the DISPLAY environment variable is set correctly, e.g.:
 
     DISPLAY=foo.bar:1 exec dwm
 
+If cannot connect, just use:
+```yay
+yay -S dwm
+```
+and then `make clean install` .
+
+
 (This will start dwm on display :1 of the host foo.bar.)
 
 In order to display status info in the bar, you can do something
