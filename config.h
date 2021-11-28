@@ -3,16 +3,16 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int snap      = 16;       /* snap pixel */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int snap      = 15;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const unsigned int systrayspacing = 1;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
-static const unsigned int gappih    = 8;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 8;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 8;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 8;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 5;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
@@ -119,8 +119,8 @@ static Key keys[] = {
 	{ 0,                   XF86XK_AudioMute,        spawn,          {.v = mutevol } },
 	{ 0,                   XF86XK_AudioRaiseVolume, spawn,          {.v = upvol   } },
 	{ MODKEY,             XK_bracketleft,           spawn,          {.v = downvol } },
-	{ MODKEY,             XF86XK_MonBrightnessDown, spawn,          {.v = lightdown } },
-	{ MODKEY,             XF86XK_MonBrightnessUp,   spawn,          {.v = lightup } },
+	{ 0,                  XF86XK_MonBrightnessDown, spawn,          {.v = lightdown } },
+	{ 0,                  XF86XK_MonBrightnessUp,   spawn,          {.v = lightup } },
 	{ MODKEY,              XK_backslash,            spawn,          {.v = mutevol } },
 	{ MODKEY,              XK_bracketright,         spawn,          {.v = upvol   } },
 	{ MODKEY,              XK_b,                    spawn,          {.v = wpcmd } },
