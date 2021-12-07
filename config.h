@@ -84,25 +84,26 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 //static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browsercmd[]  = { "google-chrome-beta", NULL };
+static const char *browsercmd[]  = { "google-chrome-stable", NULL };
+static const char *albertcmd[]  = { "albert", NULL };
 
-static const char *upvol[]   = { "/home/dav/scripts/vol-up.sh",  NULL };
-static const char *downvol[] = { "/home/dav/scripts/vol-down.sh",  NULL };
-static const char *mutevol[] = { "/home/dav/scripts/vol-toggle.sh",  NULL };
+static const char *upvol[]   = { "/home/david/scripts/vol-up.sh",  NULL };
+static const char *downvol[] = { "/home/david/scripts/vol-down.sh",  NULL };
+static const char *mutevol[] = { "/home/david/scripts/vol-toggle.sh",  NULL };
 
-static const char *wpcmd[]  = { "/home/dav/scripts/wp-change.sh", NULL };
-static const char *sktogglecmd[]  = { "/home/dav/scripts/sck-tog.sh", NULL };
+static const char *wpcmd[]  = { "/home/david/scripts/wp-change.sh", NULL };
+static const char *sktogglecmd[]  = { "/home/david/scripts/sck-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 
 //yay -S light-git
-static const char *lightdown[]  = { "/home/dav/scripts/light-down.sh", NULL };
-static const char *lightup[]  = { "/home/dav/scripts/light-up.sh", NULL };
+static const char *lightdown[]  = { "/home/david/scripts/light-down.sh", NULL };
+static const char *lightup[]  = { "/home/david/scripts/light-up.sh", NULL };
 
-static const char *setcolemakcmd[]  = { "/home/dav/scripts/setxmodmap-colemak.sh", NULL };
-static const char *setqwertycmd[]  = { "/home/dav/scripts/setxmodmap-qwerty.sh", NULL };
+static const char *setcolemakcmd[]  = { "/home/david/scripts/setxmodmap-colemak.sh", NULL };
+static const char *setqwertycmd[]  = { "/home/david/scripts/setxmodmap-qwerty.sh", NULL };
 
-static const char *suspendcmd[]  = { "/home/dav/scripts/suspend.sh", NULL };
+static const char *suspendcmd[]  = { "/home/david/scripts/suspend.sh", NULL };
 
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
@@ -111,6 +112,7 @@ static Key keys[] = {
 	{ MODKEY,              XK_s,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
+	{ MODKEY,              XK_a,                    spawn,          {.v = albertcmd } },
 	{ MODKEY|ShiftMask,    XK_w,                    spawn,          {.v = setqwertycmd } },
 	{ MODKEY|ShiftMask,    XK_m,                    spawn,          {.v = setcolemakcmd } },
 	{ MODKEY|ShiftMask,    XK_p,                    spawn,          {.v = suspendcmd } },
@@ -118,9 +120,9 @@ static Key keys[] = {
 	{ 0,                   XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
 	{ 0,                   XF86XK_AudioMute,        spawn,          {.v = mutevol } },
 	{ 0,                   XF86XK_AudioRaiseVolume, spawn,          {.v = upvol   } },
-	{ MODKEY,             XK_bracketleft,           spawn,          {.v = downvol } },
-	{ 0,                  XF86XK_MonBrightnessDown, spawn,          {.v = lightdown } },
-	{ 0,                  XF86XK_MonBrightnessUp,   spawn,          {.v = lightup } },
+	{ MODKEY,              XK_bracketleft,          spawn,          {.v = downvol } },
+	{ 0,                   XF86XK_MonBrightnessDown,spawn,          {.v = lightdown } },
+	{ 0,                   XF86XK_MonBrightnessUp,  spawn,          {.v = lightup } },
 	{ MODKEY,              XK_backslash,            spawn,          {.v = mutevol } },
 	{ MODKEY,              XK_bracketright,         spawn,          {.v = upvol   } },
 	{ MODKEY,              XK_b,                    spawn,          {.v = wpcmd } },
