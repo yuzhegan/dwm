@@ -91,6 +91,8 @@ static const char *upvol[]   = { "/home/david/scripts/vol-up.sh",  NULL };
 static const char *downvol[] = { "/home/david/scripts/vol-down.sh",  NULL };
 static const char *mutevol[] = { "/home/david/scripts/vol-toggle.sh",  NULL };
 
+static const char *newstart[] = { "/home/david/scripts/newstart.sh",  NULL };
+
 static const char *wpcmd[]  = { "/home/david/scripts/wp-change.sh", NULL };
 static const char *sktogglecmd[]  = { "/home/david/scripts/sck-tog.sh", NULL };
 static const char scratchpadname[] = "scratchpad";
@@ -113,6 +115,7 @@ static Key keys[] = {
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
 	{ MODKEY,              XK_a,                    spawn,          {.v = albertcmd } },
+	{ MODKEY|ShiftMask,    XK_a,                    spawn,          {.v = newstart } },
 	{ MODKEY|ShiftMask,    XK_w,                    spawn,          {.v = setqwertycmd } },
 	{ MODKEY|ShiftMask,    XK_m,                    spawn,          {.v = setcolemakcmd } },
 	{ MODKEY|ShiftMask,    XK_p,                    spawn,          {.v = suspendcmd } },
