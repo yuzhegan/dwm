@@ -17,8 +17,10 @@ static const int smartgaps          = 1;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Fira Code Nerd Font Mono:size=8" };
-static const char dmenufont[]       = "Fira Code Nerd Font Mono:size=8";
+//static const char *fonts[]          = { "Fira Code Nerd Font Mono:size=9" };
+//static const char dmenufont[]       = "Fira Code Nerd Font Mono:size=9";
+static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=9" };
+static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=9";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -92,6 +94,7 @@ static const char *downvol[] = { "/home/david/scripts/vol-down.sh",  NULL };
 static const char *mutevol[] = { "/home/david/scripts/vol-toggle.sh",  NULL };
 
 static const char *newstart[] = { "/home/david/scripts/newstart.sh",  NULL };
+static const char *kitestart[] = { "/home/david/scripts/kitestart.sh",  NULL };
 
 static const char *wpcmd[]  = { "/home/david/scripts/wp-change.sh", NULL };
 static const char *sktogglecmd[]  = { "/home/david/scripts/sck-tog.sh", NULL };
@@ -115,6 +118,7 @@ static Key keys[] = {
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
 	{ MODKEY,              XK_a,                    spawn,          {.v = albertcmd } },
+	{ MODKEY,              XK_e,                    spawn,          {.v = kitestart } },
 	{ MODKEY|ShiftMask,    XK_a,                    spawn,          {.v = newstart } },
 	{ MODKEY|ShiftMask,    XK_w,                    spawn,          {.v = setqwertycmd } },
 	{ MODKEY|ShiftMask,    XK_m,                    spawn,          {.v = setcolemakcmd } },
